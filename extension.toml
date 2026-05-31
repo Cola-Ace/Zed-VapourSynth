@@ -1,0 +1,25 @@
+id = "vapoursynth"
+name = "VapourSynth"
+version = "0.0.1"
+schema_version = 1
+authors = ["VapourSynth extension contributors"]
+description = "VapourSynth .vpy language support and vspreview task for Zed."
+repository = "https://github.com/Cola-Ace/Zed-VapourSynth"
+
+[grammars.python]
+repository = "https://github.com/tree-sitter/tree-sitter-python"
+rev = "293fdc02038ee2bf0e2e206711b69c90ac0d413f"
+
+[language_servers.vapoursynth-basedpyright]
+name = "VapourSynth BasedPyright"
+languages = ["VapourSynth"]
+
+[language_servers.vapoursynth-basedpyright.language_ids]
+"VapourSynth" = "python"
+
+[language_servers.vapoursynth-ruff]
+name = "VapourSynth Ruff"
+languages = ["VapourSynth"]
+
+[language_servers.vapoursynth-ruff.language_ids]
+"VapourSynth" = "python"

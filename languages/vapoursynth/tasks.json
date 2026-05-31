@@ -1,0 +1,14 @@
+[
+  {
+    "label": "vspreview current vpy",
+    "command": "$python = if ($env:VPY_PYTHON) { $env:VPY_PYTHON } else { \"python\" }; $pidFile = Join-Path $env:TEMP \"zed-vapoursynth-vspreview.json\"; if (Test-Path $pidFile) { try { $old = Get-Content $pidFile -Raw | ConvertFrom-Json; $oldProcess = Get-Process -Id $old.id -ErrorAction SilentlyContinue; if ($oldProcess -and $oldProcess.StartTime.Ticks -eq $old.startTime) { Stop-Process -Id $old.id -Force } } catch {} }; try { Get-CimInstance Win32_Process -ErrorAction Stop | Where-Object { $_.CommandLine -match '(^|\\s)-m\\s+vspreview(\\s|$)' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force } } catch {}; $process = Start-Process -FilePath $python -ArgumentList @(\"-m\", \"vspreview\", ('\"{0}\"' -f \"$ZED_FILE\")) -NoNewWindow -PassThru; @{ id = $process.Id; startTime = $process.StartTime.Ticks } | ConvertTo-Json | Set-Content $pidFile; $process.WaitForExit(); exit $process.ExitCode",
+    "args": [],
+    "cwd": "$ZED_DIRNAME",
+    "tags": ["vpy-preview"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true,
+    "reveal": "always",
+    "show_command": true,
+    "save": "current"
+  }
+]
