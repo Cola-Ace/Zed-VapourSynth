@@ -1,6 +1,6 @@
 # Zed-VapourSynth
 
-[English](README.md)
+[English](README.md) | [更新日志](CHANGELOG.zh-CN.md)
 
 用于 Zed 的 VapourSynth 语言支持扩展。该扩展会将 `.vpy` 文件注册为独立的 `VapourSynth` 语言，并使用 Python Tree-sitter 语法进行高亮。
 
