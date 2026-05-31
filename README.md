@@ -1,5 +1,7 @@
 # Zed-VapourSynth
 
+[简体中文](README.zh-CN.md)
+
 VapourSynth language support for Zed. This extension registers `.vpy` files as a dedicated `VapourSynth` language backed by the Python Tree-sitter grammar.
 
 ## Features
