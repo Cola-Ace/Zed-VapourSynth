@@ -60,6 +60,19 @@ To bind it to `Ctrl+F5`, add the contents of `examples/keymap.json` to your Zed 
 %APPDATA%\Zed\keymap.json
 ```
 
+Example `keymap.json` entry:
+
+```json
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-f5": ["task::Spawn", { "task_name": "vspreview current vpy" }]
+    }
+  }
+]
+```
+
 ## Development
 
 Build the extension with:

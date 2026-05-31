@@ -60,6 +60,19 @@
 %APPDATA%\Zed\keymap.json
 ```
 
+`keymap.json` 填写示例：
+
+```json
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-f5": ["task::Spawn", { "task_name": "vspreview current vpy" }]
+    }
+  }
+]
+```
+
 ## 开发
 
 构建扩展：
