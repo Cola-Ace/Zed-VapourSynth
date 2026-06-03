@@ -75,7 +75,7 @@
 
 ## 开发
 
-Zed 通过 Install Dev Extension 安装本地扩展时会默认从源码构建 extension WASM 和 grammar 产物，请确保安装扩展时本地已安装 cargo。
+Zed 通过 Install Dev Extension 安装本地扩展时会默认从源码构建 extension WASM 和 grammar 产物，请确保安装扩展时本地已安装 cargo
 
 本地构建检查：
 
