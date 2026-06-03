@@ -75,7 +75,7 @@
 
 ## 开发
 
-Zed 在安装开发版扩展或发布扩展时会构建 extension WASM 和 grammar 产物。不要提交生成的 `.wasm` 文件。
+Zed 通过 Install Dev Extension 安装本地扩展时会默认从源码构建 extension WASM 和 grammar 产物，请确保安装扩展时本地已安装 cargo。
 
 本地构建检查：
 

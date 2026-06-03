@@ -75,7 +75,7 @@ Example `keymap.json` entry:
 
 ## Development
 
-Zed builds the extension WASM and grammar artifacts when installing a dev extension or publishing the extension. Do not commit generated `.wasm` files.
+When installing a local extension through Install Dev Extension, Zed builds the extension WASM and grammar artifacts from source by default. Make sure cargo is installed locally when installing the extension.
 
 Run a local build check with:
 
