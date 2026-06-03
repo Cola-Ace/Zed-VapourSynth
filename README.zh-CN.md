@@ -75,16 +75,12 @@
 
 ## 开发
 
-构建扩展：
+Zed 在安装开发版扩展或发布扩展时会构建 extension WASM 和 grammar 产物。不要提交生成的 `.wasm` 文件。
+
+本地构建检查：
 
 ```powershell
 cargo build --target wasm32-wasip2 --release
-```
-
-然后将 release 产物复制为 `extension.wasm`：
-
-```powershell
-Copy-Item target\wasm32-wasip2\release\zed_vapoursynth.wasm extension.wasm
 ```
 
 ## 致谢

@@ -75,16 +75,12 @@ Example `keymap.json` entry:
 
 ## Development
 
-Build the extension with:
+Zed builds the extension WASM and grammar artifacts when installing a dev extension or publishing the extension. Do not commit generated `.wasm` files.
+
+Run a local build check with:
 
 ```powershell
 cargo build --target wasm32-wasip2 --release
-```
-
-Then copy the release artifact to `extension.wasm`:
-
-```powershell
-Copy-Item target\wasm32-wasip2\release\zed_vapoursynth.wasm extension.wasm
 ```
 
 ## Credits
