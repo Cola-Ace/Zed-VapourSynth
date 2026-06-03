@@ -1,6 +1,8 @@
 target/
 .zed-vapoursynth-stubs/
 package-lock.json
+extension.wasm
+grammars/*.wasm
 
 __pycache__/
 .pytest_cache/

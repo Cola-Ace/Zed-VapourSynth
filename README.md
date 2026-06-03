@@ -75,16 +75,12 @@ Example `keymap.json` entry:
 
 ## Development
 
-Build the extension with:
+When installing a local extension through Install Dev Extension, Zed builds the extension WASM and grammar artifacts from source by default. Make sure cargo is installed locally when installing the extension.
+
+Run a local build check with:
 
 ```powershell
 cargo build --target wasm32-wasip2 --release
-```
-
-Then copy the release artifact to `extension.wasm`:
-
-```powershell
-Copy-Item target\wasm32-wasip2\release\zed_vapoursynth.wasm extension.wasm
 ```
 
 ## Credits
